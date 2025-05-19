@@ -10,7 +10,7 @@ load_dotenv() # Carga .env desde la raíz del proyecto si ejecutas localmente,
               # Para docker-compose, las variables de .env ya están inyectadas.
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_API_KEY")
-CHATBOT_CORE_URL = "http://chatbot_core:8000/chat" # <--- URL DEL SERVICIO CHATBOT_CORE
+CHATBOT_CORE_URL = "http://pruebas_project_3.railway.internal:8000/chat" # <--- URL DEL SERVICIO CHATBOT_CORE
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
