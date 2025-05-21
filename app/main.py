@@ -30,7 +30,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     print(f"Telegram Gateway: Enviando a Chatbot Core: {payload}")
 
     try:
-        response = requests.post(CHATBOT_CORE_URL, json=payload, timeout=10) # timeout de 10s
+        response = requests.post(CHATBOT_CORE_URL, json=payload, timeout=40) # timeout de 10s
         response.raise_for_status() # Lanza una excepción para errores HTTP 4xx/5xx
         
         response_data = response.json()
